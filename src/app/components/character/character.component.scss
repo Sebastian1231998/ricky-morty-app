@@ -1,0 +1,9 @@
+ion-card{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #e5f0f9;
+}
+ion-card ion-img{
+    flex: 0 0 calc(50% - 1rem);
+}

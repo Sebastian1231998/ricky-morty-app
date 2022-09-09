@@ -1,0 +1,14 @@
+<ion-card *ngFor="let character of characters">
+  <ion-img [src]="character.image"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{character.gender}}</ion-card-subtitle>
+    <ion-card-title>{{character.name}}</ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<ion-infinite-scroll threshold="0px" (ionInfinite)="loadMoreCharacters($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
